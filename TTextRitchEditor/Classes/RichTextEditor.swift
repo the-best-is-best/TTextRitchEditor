@@ -7,17 +7,24 @@
 
 import SwiftUI
 
-struct RichTextEditor: UIViewRepresentable {
-    typealias UIViewType = UITextView
+public struct RichTextEditor: UIViewRepresentable {
+    public typealias UIViewType = UITextView
     
     @Binding var attributedText: NSMutableAttributedString
     @EnvironmentObject var viewModel: TextEditorViewModel
+    var isReadOnly: Bool
     
-    func makeUIView(context: Context) -> UITextView {
+    public init(attributedText: Binding<NSMutableAttributedString>, isReadOnly: Bool) {
+        self._attributedText = attributedText
+        self.isReadOnly = isReadOnly
+    }
+    
+    public func makeUIView(context: Context) -> UITextView {
         let textView = UITextView()
         textView.isScrollEnabled = true
-        textView.isEditable = true
+        textView.isEditable = !isReadOnly
         textView.isUserInteractionEnabled = true
+        textView.isSelectable = true
         textView.delegate = context.coordinator
         
         // Set initial attributed text
@@ -26,17 +33,21 @@ struct RichTextEditor: UIViewRepresentable {
         return textView
     }
     
-    func updateUIView(_ uiView: UITextView, context: Context) {
+    public func updateUIView(_ uiView: UITextView, context: Context) {
         let selectedRange = uiView.selectedRange
         uiView.attributedText = attributedText
         uiView.selectedRange = selectedRange
+        
+        // Update the read-only state
+        uiView.isEditable = !isReadOnly
+        uiView.isSelectable = true
     }
     
-    func makeCoordinator() -> Coordinator {
+    public func makeCoordinator() -> Coordinator {
         return Coordinator(parent: self)
     }
     
-    class Coordinator: NSObject, UITextViewDelegate {
+    public class Coordinator: NSObject, UITextViewDelegate {
         var parent: RichTextEditor
         
         init(parent: RichTextEditor) {
@@ -93,7 +104,7 @@ struct RichTextEditor: UIViewRepresentable {
             attributedString.addAttributes(attributes, range: range)
         }
         
-        func textAlign(_ selectedRange: NSRange, _ attributedString: NSMutableAttributedString, _ textView: UITextView) {
+        public func textAlign(_ selectedRange: NSRange, _ attributedString: NSMutableAttributedString, _ textView: UITextView) {
             let range = NSRange(location: selectedRange.location - 1, length: 1)
             
             let paragraphStyle = NSMutableParagraphStyle()
@@ -106,7 +117,7 @@ struct RichTextEditor: UIViewRepresentable {
             textView.selectedRange = newSelectedRange
         }
         
-        func bulletList(_ textView: UITextView, _ attributedString: NSMutableAttributedString) {
+        public func bulletList(_ textView: UITextView, _ attributedString: NSMutableAttributedString) {
             if parent.viewModel.isBulletedListActive {
                 var moveCursor = false
                 let selectedRange = textView.selectedRange
@@ -146,7 +157,7 @@ struct RichTextEditor: UIViewRepresentable {
             }
         }
         
-        func textViewDidChange(_ textView: UITextView) {
+        public func textViewDidChange(_ textView: UITextView) {
             let selectedRange = textView.selectedRange
             let attributedString = NSMutableAttributedString(attributedString: textView.attributedText)
             
@@ -156,7 +167,7 @@ struct RichTextEditor: UIViewRepresentable {
             parent.attributedText = attributedString
         }
         
-        func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
             // Check if trying to delete the first character
             if text.isEmpty && range.length == 1 && range.location == 0 {
                 // Convert to plain text for manipulation

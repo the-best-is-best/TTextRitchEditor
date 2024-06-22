@@ -12,37 +12,43 @@ public struct TextRitchEditorView: View {
     @StateObject var viewModel: TextEditorViewModel
     var styleTextEditorBar: TextEditorTabBarStyle
     var generatedJson: Binding<String>
-    
-    public init(styleTextEditorBar: TextEditorTabBarStyle = TextEditorTabBarStyle(), dataJson: String? = nil, getNewValue: Binding<String>) {
+    var isReadOnly: Bool
+
+    public init(styleTextEditorBar: TextEditorTabBarStyle = TextEditorTabBarStyle(), dataJson: String? = nil, getNewValue: Binding<String>, isReadOnly:Bool = false) {
         self.styleTextEditorBar = styleTextEditorBar
         self.dataJson = dataJson
         _viewModel = StateObject(wrappedValue: TextEditorViewModel(data: dataJson?.data(using: .utf8))) // Initialize with nil data initially
         self.generatedJson = getNewValue
+        self.isReadOnly = isReadOnly
     }
     
     public var body: some View {
         ZStack {
             VStack {
-                TextEditorToolBar(style: styleTextEditorBar)
-                    .environmentObject(viewModel)
-                    .padding()
-                
-                RichTextEditor(attributedText: $viewModel.attributedText)
-                    .environmentObject(viewModel).frame(height: UIScreen.main.bounds.height * 0.3)
-                    .border(Color.gray)
-                    .padding(.horizontal, 30)
-                    .padding(.vertical)
-                
-                if viewModel.mediaType == .image, let imageData = viewModel.imageOrVideo, let uiImage = UIImage(data: imageData) {
-                    Image(uiImage: uiImage)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: .infinity)
-                } else if viewModel.mediaType == .video, let videoData = viewModel.imageOrVideo {
-                    VideoPlayerView(videoData: videoData)
-                        .frame(maxWidth: .infinity)
+                if(!isReadOnly){
+                    TextEditorToolBar(style: styleTextEditorBar)
+                        .environmentObject(viewModel)
                         .padding()
                 }
+                VStack {
+                    RichTextEditor(attributedText: $viewModel.attributedText, isReadOnly: isReadOnly)
+                        .environmentObject(viewModel).frame(height: UIScreen.main.bounds.height * 0.3)
+                       
+                    
+                    if viewModel.mediaType == .image, let imageData = viewModel.imageOrVideo, let uiImage = UIImage(data: imageData) {
+                        Image(uiImage: uiImage)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: .infinity).padding()
+                    } else if viewModel.mediaType == .video, let videoData = viewModel.imageOrVideo {
+                        VideoPlayerView(videoData: videoData)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                    }
+                }   .border(Color.gray)
+                    .padding(.horizontal, 30)
+                    .padding(.vertical)
+
             }
             .background(Color.white) // Ensure background color for the full height
             .onChange(of: viewModel.generatedJson) { newJson in
