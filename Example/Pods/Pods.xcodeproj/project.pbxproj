@@ -1,0 +1,861 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07D520846EF10301148782DC0BB56D09 /* TextRitchEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE35AE66FE0A78AEE6626C586C4D6EF0 /* TextRitchEditorView.swift */; };
+		088961ED90242F626F4DAB5871E29464 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		2C79DC82083BCCF5A8EFDB3BC0A29275 /* ExtFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CF19B7117ADE37C47F1D416DFC60D /* ExtFont.swift */; };
+		3A02D33258037F9FDC5F34B49B94CD0B /* FontSizeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B831655508CC76AAB1FAB9F64576FCE6 /* FontSizeSelectionView.swift */; };
+		3AF595924743A7DBD81C84304B209CED /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3688AA5369546ECA437CA7F193470032 /* VideoPlayerView.swift */; };
+		415EFB5B2C27080D00E4016B /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFB5A2C27080D00E4016B /* ColorPickerView.swift */; };
+		44A1491231E4BCE5D728186EE013C465 /* TextEditorToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F547E485278A8C0B2C9BB950EC65C6F /* TextEditorToolBar.swift */; };
+		49293160AB1F7F20690D206B6C58E6F0 /* TTextRitchEditor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BD25C2773D584509F2DC4EC564BF153 /* TTextRitchEditor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		562AAEBE73C522FAF0709FE1BE198705 /* TextEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FABBDCB6E7339D086902D3EBCC126B /* TextEditorViewModel.swift */; };
+		6300A58384B738784D8A90CCE0E0219E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		6365B38254C948A1895140809E49C9D4 /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD870D7B025656F3B9E48F31D2680A0 /* MediaType.swift */; };
+		7279347228825807BCE5328C083CBB6D /* Pods-TTextRitchEditor_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A072E53BCF43A195FCBB3AD34EE9122 /* Pods-TTextRitchEditor_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		770853734061ED3ECC678C7A3A46A528 /* Pods-TTextRitchEditor_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7739599790061F2CB9413882FC59489 /* Pods-TTextRitchEditor_Example-dummy.m */; };
+		786A83BE1879385A42703053D6E77E1B /* TextPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF7CD1CDBCCA3F10C59822C928F1F72 /* TextPosition.swift */; };
+		7B9A60956A0E8A433717EE77FDFD0D4C /* TTextRitchEditor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E07951E67BF0473CD01BC2BDF74680E4 /* TTextRitchEditor-dummy.m */; };
+		8654352DAA626DCF97D8926F6F195D22 /* ImageOrVideoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C2B4F46A40E30F5E90F4BBA4229AF /* ImageOrVideoPickerView.swift */; };
+		96AA5C3AF2AF18C6119396C0EE30FE44 /* QuillParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5D242DE1E2953E194A23D4832FDA3 /* QuillParser.swift */; };
+		A624EA19AAF398DA589426D8196C3124 /* Pods-TTextRitchEditor_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0109AE77F843D82F63165A1E036AC2 /* Pods-TTextRitchEditor_Tests-dummy.m */; };
+		AE0C9A880DB521037DB65B438E6615B4 /* converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E1FEAD6E2A9E32F8AE5D5B27ABAC1 /* converter.swift */; };
+		AE48F77FBB39F4589AA65ACA93BD947D /* TextEditorTabBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F602A637730A2BDEF2F0559270C2746 /* TextEditorTabBarStyle.swift */; };
+		BEAF51883FC082326D5447BC35512765 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46199320771986C94FBD523BC749FA73 /* TextStyle.swift */; };
+		CAAC1CEAF7C96869BBDF9026ABFC4A00 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99BC668F50F516066E53A01CCD6AD4 /* NSMutableAttributedString.swift */; };
+		D6CF525E3898C1BD6AFCEB1155EA065E /* ENUMFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E7C0AD1B8E7158823CE31B2B7B69DB /* ENUMFontSize.swift */; };
+		D9FF93D0025D60770F05A3BB2C4767AA /* QuillType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7EC1ED1623DFB4E85EB78070CBCD4A /* QuillType.swift */; };
+		E0CDA308F608BE0553093CB83EDB0FD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		ED9273A99CC87DF031F489FF649EA902 /* Pods-TTextRitchEditor_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E132155D3B82E4D7BC0EAD3351A61F91 /* Pods-TTextRitchEditor_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F19C61DA32BEF94305E12A7787E86039 /* ExtColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35DA388E4FB501BA22ECC624B72928 /* ExtColor.swift */; };
+		F7171DCC79D3AD359096F8B4C239D3ED /* RichTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A254F0A1DB46F7774076D466787C2C3 /* RichTextEditor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		118494923714DE01462417BA13312C22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1528B04F685C5C44AEDAAC5BC50414BB;
+			remoteInfo = TTextRitchEditor;
+		};
+		686BE8283F3EBB92B4A7DA59D8E351BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E8D7DC82AA921976B16AFE65EBA4377;
+			remoteInfo = "Pods-TTextRitchEditor_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0122D18DDE393405B0A3416EDDBAE05C /* TTextRitchEditor */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TTextRitchEditor; path = TTextRitchEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01D57C6E3A8958AE8A679F4F11A9FA04 /* Pods-TTextRitchEditor_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TTextRitchEditor_Tests.modulemap"; sourceTree = "<group>"; };
+		0BD25C2773D584509F2DC4EC564BF153 /* TTextRitchEditor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTextRitchEditor-umbrella.h"; sourceTree = "<group>"; };
+		1B99BC668F50F516066E53A01CCD6AD4 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSMutableAttributedString.swift; path = TTextRitchEditor/Classes/NSMutableAttributedString.swift; sourceTree = "<group>"; };
+		1CE16748AEA5103D52BA7CB0D912B599 /* TTextRitchEditor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTextRitchEditor-prefix.pch"; sourceTree = "<group>"; };
+		31353B77C11CC0B4F070E4BC6A8391E9 /* Pods-TTextRitchEditor_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TTextRitchEditor_Tests-Info.plist"; sourceTree = "<group>"; };
+		344C2B4F46A40E30F5E90F4BBA4229AF /* ImageOrVideoPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageOrVideoPickerView.swift; path = TTextRitchEditor/Classes/ImageOrVideoPickerView.swift; sourceTree = "<group>"; };
+		3688AA5369546ECA437CA7F193470032 /* VideoPlayerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoPlayerView.swift; path = TTextRitchEditor/Classes/VideoPlayerView.swift; sourceTree = "<group>"; };
+		397E1FEAD6E2A9E32F8AE5D5B27ABAC1 /* converter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = converter.swift; path = TTextRitchEditor/Classes/converter.swift; sourceTree = "<group>"; };
+		3A316C4ABFAB74683C9308399488E5C9 /* Pods-TTextRitchEditor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTextRitchEditor_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		415EFB5A2C27080D00E4016B /* ColorPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorPickerView.swift; path = ../TTextRitchEditor/Classes/ColorPickerView.swift; sourceTree = "<group>"; };
+		46199320771986C94FBD523BC749FA73 /* TextStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextStyle.swift; path = TTextRitchEditor/Classes/TextStyle.swift; sourceTree = "<group>"; };
+		4C6B25595A77FBC3FA95D4F606B39C80 /* TTextRitchEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTextRitchEditor.debug.xcconfig; sourceTree = "<group>"; };
+		51DDEAAF7FBBA68FE0AC41CC62D0B568 /* Pods-TTextRitchEditor_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TTextRitchEditor_Example"; path = Pods_TTextRitchEditor_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55C7EFCE37E6321183FDE1E26F6D3793 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5DF7CD1CDBCCA3F10C59822C928F1F72 /* TextPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextPosition.swift; path = TTextRitchEditor/Classes/TextPosition.swift; sourceTree = "<group>"; };
+		5F547E485278A8C0B2C9BB950EC65C6F /* TextEditorToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextEditorToolBar.swift; path = TTextRitchEditor/Classes/TextEditorToolBar.swift; sourceTree = "<group>"; };
+		6A254F0A1DB46F7774076D466787C2C3 /* RichTextEditor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RichTextEditor.swift; path = TTextRitchEditor/Classes/RichTextEditor.swift; sourceTree = "<group>"; };
+		70EF870AF8FA5EBF10737D92DC83A08F /* Pods-TTextRitchEditor_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TTextRitchEditor_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7191AFA45D8551F5BD652871AE431FA1 /* Pods-TTextRitchEditor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTextRitchEditor_Example.release.xcconfig"; sourceTree = "<group>"; };
+		727DFCA81D013002B46618F276B0A8AE /* Pods-TTextRitchEditor_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TTextRitchEditor_Example-Info.plist"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7545C3B09A3C3AB40BDCF784FE6B881D /* Pods-TTextRitchEditor_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TTextRitchEditor_Example.modulemap"; sourceTree = "<group>"; };
+		7B0109AE77F843D82F63165A1E036AC2 /* Pods-TTextRitchEditor_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TTextRitchEditor_Tests-dummy.m"; sourceTree = "<group>"; };
+		7EA0B46F487B86405D5E87B7B22A40AA /* Pods-TTextRitchEditor_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TTextRitchEditor_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		81E7C0AD1B8E7158823CE31B2B7B69DB /* ENUMFontSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ENUMFontSize.swift; path = TTextRitchEditor/Classes/ENUMFontSize.swift; sourceTree = "<group>"; };
+		94FABBDCB6E7339D086902D3EBCC126B /* TextEditorViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextEditorViewModel.swift; path = TTextRitchEditor/Classes/TextEditorViewModel.swift; sourceTree = "<group>"; };
+		99FD61977223A1BBA80AFC7813E0A893 /* Pods-TTextRitchEditor_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TTextRitchEditor_Example-frameworks.sh"; sourceTree = "<group>"; };
+		9A072E53BCF43A195FCBB3AD34EE9122 /* Pods-TTextRitchEditor_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TTextRitchEditor_Example-umbrella.h"; sourceTree = "<group>"; };
+		9CD870D7B025656F3B9E48F31D2680A0 /* MediaType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MediaType.swift; path = TTextRitchEditor/Classes/MediaType.swift; sourceTree = "<group>"; };
+		9D7EC1ED1623DFB4E85EB78070CBCD4A /* QuillType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuillType.swift; path = TTextRitchEditor/Classes/QuillType.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F602A637730A2BDEF2F0559270C2746 /* TextEditorTabBarStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextEditorTabBarStyle.swift; path = TTextRitchEditor/Classes/TextEditorTabBarStyle.swift; sourceTree = "<group>"; };
+		9F9247E808859E4A08B89C265EBAF17A /* Pods-TTextRitchEditor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTextRitchEditor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A9A968EAD33CBDFA11B339B8DF4D5D0A /* Pods-TTextRitchEditor_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TTextRitchEditor_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AF35DA388E4FB501BA22ECC624B72928 /* ExtColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtColor.swift; path = TTextRitchEditor/Classes/ExtColor.swift; sourceTree = "<group>"; };
+		B831655508CC76AAB1FAB9F64576FCE6 /* FontSizeSelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontSizeSelectionView.swift; path = TTextRitchEditor/Classes/FontSizeSelectionView.swift; sourceTree = "<group>"; };
+		BDA5D242DE1E2953E194A23D4832FDA3 /* QuillParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuillParser.swift; path = TTextRitchEditor/Classes/QuillParser.swift; sourceTree = "<group>"; };
+		BF5CF19B7117ADE37C47F1D416DFC60D /* ExtFont.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtFont.swift; path = TTextRitchEditor/Classes/ExtFont.swift; sourceTree = "<group>"; };
+		C3923782AC9475480E8C0E2A350AAE36 /* TTextRitchEditor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TTextRitchEditor.modulemap; sourceTree = "<group>"; };
+		CB24B3347F0E248332C5F7DFEB7B4D65 /* Pods-TTextRitchEditor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTextRitchEditor_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D2A9B83F09E9CF948A6107AE539EEE48 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D7739599790061F2CB9413882FC59489 /* Pods-TTextRitchEditor_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TTextRitchEditor_Example-dummy.m"; sourceTree = "<group>"; };
+		DC0200944B9AC33442217A017D1015E5 /* Pods-TTextRitchEditor_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TTextRitchEditor_Tests"; path = Pods_TTextRitchEditor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E07951E67BF0473CD01BC2BDF74680E4 /* TTextRitchEditor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TTextRitchEditor-dummy.m"; sourceTree = "<group>"; };
+		E132155D3B82E4D7BC0EAD3351A61F91 /* Pods-TTextRitchEditor_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TTextRitchEditor_Tests-umbrella.h"; sourceTree = "<group>"; };
+		E6832A5B00B384775BFC75DF6D8E12CB /* TTextRitchEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTextRitchEditor.release.xcconfig; sourceTree = "<group>"; };
+		E7E0CB1723A44CFDCCDAB78635DA5A42 /* Pods-TTextRitchEditor_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TTextRitchEditor_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		EE35AE66FE0A78AEE6626C586C4D6EF0 /* TextRitchEditorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextRitchEditorView.swift; path = TTextRitchEditor/Classes/TextRitchEditorView.swift; sourceTree = "<group>"; };
+		EF024E6E8DC35FD7BF2830B232570B9B /* TTextRitchEditor.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TTextRitchEditor.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F4AC4D0212CF975738ED30FB8DA39B2F /* TTextRitchEditor-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TTextRitchEditor-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C1E8D6C4F9E4B2C288B6BC9980D1BBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				088961ED90242F626F4DAB5871E29464 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		180BBD807072E7D8CE32AD14F0D3ABD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0CDA308F608BE0553093CB83EDB0FD0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ED6988A6233D0101A18912CB66CC8C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6300A58384B738784D8A90CCE0E0219E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		015FC6E3EE2B920DB89BA67F258C7D3D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3BC5DBCCFE40ED059A858EED63946AA /* Pods-TTextRitchEditor_Example */,
+				C9EEE6FC8F8E9E63F3A54FCE04824504 /* Pods-TTextRitchEditor_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		05527BE97997A07B8A53F9C5E61FCA18 /* TTextRitchEditor */ = {
+			isa = PBXGroup;
+			children = (
+				415EFB592C27077A00E4016B /* Views */,
+				397E1FEAD6E2A9E32F8AE5D5B27ABAC1 /* converter.swift */,
+				81E7C0AD1B8E7158823CE31B2B7B69DB /* ENUMFontSize.swift */,
+				AF35DA388E4FB501BA22ECC624B72928 /* ExtColor.swift */,
+				BF5CF19B7117ADE37C47F1D416DFC60D /* ExtFont.swift */,
+				B831655508CC76AAB1FAB9F64576FCE6 /* FontSizeSelectionView.swift */,
+				344C2B4F46A40E30F5E90F4BBA4229AF /* ImageOrVideoPickerView.swift */,
+				9CD870D7B025656F3B9E48F31D2680A0 /* MediaType.swift */,
+				1B99BC668F50F516066E53A01CCD6AD4 /* NSMutableAttributedString.swift */,
+				BDA5D242DE1E2953E194A23D4832FDA3 /* QuillParser.swift */,
+				9D7EC1ED1623DFB4E85EB78070CBCD4A /* QuillType.swift */,
+				6A254F0A1DB46F7774076D466787C2C3 /* RichTextEditor.swift */,
+				9F602A637730A2BDEF2F0559270C2746 /* TextEditorTabBarStyle.swift */,
+				5F547E485278A8C0B2C9BB950EC65C6F /* TextEditorToolBar.swift */,
+				94FABBDCB6E7339D086902D3EBCC126B /* TextEditorViewModel.swift */,
+				5DF7CD1CDBCCA3F10C59822C928F1F72 /* TextPosition.swift */,
+				EE35AE66FE0A78AEE6626C586C4D6EF0 /* TextRitchEditorView.swift */,
+				46199320771986C94FBD523BC749FA73 /* TextStyle.swift */,
+				3688AA5369546ECA437CA7F193470032 /* VideoPlayerView.swift */,
+				DB0673EBFE46B03BD569989EBFE6350F /* Pod */,
+				F3751C5FD74062B1D41D8CA397E41D6D /* Support Files */,
+			);
+			name = TTextRitchEditor;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		415EFB592C27077A00E4016B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				415EFB5A2C27080D00E4016B /* ColorPickerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		600853DB4844D022ADB98E1798A2AEFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51DDEAAF7FBBA68FE0AC41CC62D0B568 /* Pods-TTextRitchEditor_Example */,
+				DC0200944B9AC33442217A017D1015E5 /* Pods-TTextRitchEditor_Tests */,
+				0122D18DDE393405B0A3416EDDBAE05C /* TTextRitchEditor */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3BC5DBCCFE40ED059A858EED63946AA /* Pods-TTextRitchEditor_Example */ = {
+			isa = PBXGroup;
+			children = (
+				7545C3B09A3C3AB40BDCF784FE6B881D /* Pods-TTextRitchEditor_Example.modulemap */,
+				70EF870AF8FA5EBF10737D92DC83A08F /* Pods-TTextRitchEditor_Example-acknowledgements.markdown */,
+				E7E0CB1723A44CFDCCDAB78635DA5A42 /* Pods-TTextRitchEditor_Example-acknowledgements.plist */,
+				D7739599790061F2CB9413882FC59489 /* Pods-TTextRitchEditor_Example-dummy.m */,
+				99FD61977223A1BBA80AFC7813E0A893 /* Pods-TTextRitchEditor_Example-frameworks.sh */,
+				727DFCA81D013002B46618F276B0A8AE /* Pods-TTextRitchEditor_Example-Info.plist */,
+				9A072E53BCF43A195FCBB3AD34EE9122 /* Pods-TTextRitchEditor_Example-umbrella.h */,
+				3A316C4ABFAB74683C9308399488E5C9 /* Pods-TTextRitchEditor_Example.debug.xcconfig */,
+				7191AFA45D8551F5BD652871AE431FA1 /* Pods-TTextRitchEditor_Example.release.xcconfig */,
+			);
+			name = "Pods-TTextRitchEditor_Example";
+			path = "Target Support Files/Pods-TTextRitchEditor_Example";
+			sourceTree = "<group>";
+		};
+		C9EEE6FC8F8E9E63F3A54FCE04824504 /* Pods-TTextRitchEditor_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				01D57C6E3A8958AE8A679F4F11A9FA04 /* Pods-TTextRitchEditor_Tests.modulemap */,
+				A9A968EAD33CBDFA11B339B8DF4D5D0A /* Pods-TTextRitchEditor_Tests-acknowledgements.markdown */,
+				7EA0B46F487B86405D5E87B7B22A40AA /* Pods-TTextRitchEditor_Tests-acknowledgements.plist */,
+				7B0109AE77F843D82F63165A1E036AC2 /* Pods-TTextRitchEditor_Tests-dummy.m */,
+				31353B77C11CC0B4F070E4BC6A8391E9 /* Pods-TTextRitchEditor_Tests-Info.plist */,
+				E132155D3B82E4D7BC0EAD3351A61F91 /* Pods-TTextRitchEditor_Tests-umbrella.h */,
+				9F9247E808859E4A08B89C265EBAF17A /* Pods-TTextRitchEditor_Tests.debug.xcconfig */,
+				CB24B3347F0E248332C5F7DFEB7B4D65 /* Pods-TTextRitchEditor_Tests.release.xcconfig */,
+			);
+			name = "Pods-TTextRitchEditor_Tests";
+			path = "Target Support Files/Pods-TTextRitchEditor_Tests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				F3FC87E1C9DA20490C2DC28CA8817A23 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				600853DB4844D022ADB98E1798A2AEFB /* Products */,
+				015FC6E3EE2B920DB89BA67F258C7D3D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB0673EBFE46B03BD569989EBFE6350F /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D2A9B83F09E9CF948A6107AE539EEE48 /* LICENSE */,
+				55C7EFCE37E6321183FDE1E26F6D3793 /* README.md */,
+				EF024E6E8DC35FD7BF2830B232570B9B /* TTextRitchEditor.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		F3751C5FD74062B1D41D8CA397E41D6D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3923782AC9475480E8C0E2A350AAE36 /* TTextRitchEditor.modulemap */,
+				E07951E67BF0473CD01BC2BDF74680E4 /* TTextRitchEditor-dummy.m */,
+				F4AC4D0212CF975738ED30FB8DA39B2F /* TTextRitchEditor-Info.plist */,
+				1CE16748AEA5103D52BA7CB0D912B599 /* TTextRitchEditor-prefix.pch */,
+				0BD25C2773D584509F2DC4EC564BF153 /* TTextRitchEditor-umbrella.h */,
+				4C6B25595A77FBC3FA95D4F606B39C80 /* TTextRitchEditor.debug.xcconfig */,
+				E6832A5B00B384775BFC75DF6D8E12CB /* TTextRitchEditor.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TTextRitchEditor";
+			sourceTree = "<group>";
+		};
+		F3FC87E1C9DA20490C2DC28CA8817A23 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05527BE97997A07B8A53F9C5E61FCA18 /* TTextRitchEditor */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0FA973484FD4766C94827646C89B3E35 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED9273A99CC87DF031F489FF649EA902 /* Pods-TTextRitchEditor_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		698FFA9ACFA6ABAB9EC03F7FCF48F8FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7279347228825807BCE5328C083CBB6D /* Pods-TTextRitchEditor_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBF1282455E91FF02F83785D148E8700 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49293160AB1F7F20690D206B6C58E6F0 /* TTextRitchEditor-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		12ADF7E2F9C6E9B01FBA74A7900674B0 /* Pods-TTextRitchEditor_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09C51F7D01ED4C5B7C599529BBF7A5A2 /* Build configuration list for PBXNativeTarget "Pods-TTextRitchEditor_Tests" */;
+			buildPhases = (
+				0FA973484FD4766C94827646C89B3E35 /* Headers */,
+				158B9785A64E478F7E57F324C8AC998B /* Sources */,
+				180BBD807072E7D8CE32AD14F0D3ABD3 /* Frameworks */,
+				408B524BFA9DC57EA8C1121C48BE6016 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F22C5B164C364F413C79170F64D7643 /* PBXTargetDependency */,
+			);
+			name = "Pods-TTextRitchEditor_Tests";
+			productName = Pods_TTextRitchEditor_Tests;
+			productReference = DC0200944B9AC33442217A017D1015E5 /* Pods-TTextRitchEditor_Tests */;
+			productType = "com.apple.product-type.framework";
+		};
+		1528B04F685C5C44AEDAAC5BC50414BB /* TTextRitchEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 138A9E0348EA121AEB534694A4FC3DFB /* Build configuration list for PBXNativeTarget "TTextRitchEditor" */;
+			buildPhases = (
+				CBF1282455E91FF02F83785D148E8700 /* Headers */,
+				BC1D5E10CDDA74C06AEA5AA54C3FEDD6 /* Sources */,
+				5ED6988A6233D0101A18912CB66CC8C7 /* Frameworks */,
+				5F608795A75F85207E77A015DC29393B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTextRitchEditor;
+			productName = TTextRitchEditor;
+			productReference = 0122D18DDE393405B0A3416EDDBAE05C /* TTextRitchEditor */;
+			productType = "com.apple.product-type.framework";
+		};
+		4E8D7DC82AA921976B16AFE65EBA4377 /* Pods-TTextRitchEditor_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41CD9985FACAFADF4605B37177AAB01C /* Build configuration list for PBXNativeTarget "Pods-TTextRitchEditor_Example" */;
+			buildPhases = (
+				698FFA9ACFA6ABAB9EC03F7FCF48F8FB /* Headers */,
+				DCD2D4119BC1A8B3677ADCBFC0852144 /* Sources */,
+				0C1E8D6C4F9E4B2C288B6BC9980D1BBA /* Frameworks */,
+				B28FA20D336875D554F73C70CFCD407A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D02B2B935DE5B9A543925CE7AD3F730 /* PBXTargetDependency */,
+			);
+			name = "Pods-TTextRitchEditor_Example";
+			productName = Pods_TTextRitchEditor_Example;
+			productReference = 51DDEAAF7FBBA68FE0AC41CC62D0B568 /* Pods-TTextRitchEditor_Example */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 600853DB4844D022ADB98E1798A2AEFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E8D7DC82AA921976B16AFE65EBA4377 /* Pods-TTextRitchEditor_Example */,
+				12ADF7E2F9C6E9B01FBA74A7900674B0 /* Pods-TTextRitchEditor_Tests */,
+				1528B04F685C5C44AEDAAC5BC50414BB /* TTextRitchEditor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		408B524BFA9DC57EA8C1121C48BE6016 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F608795A75F85207E77A015DC29393B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B28FA20D336875D554F73C70CFCD407A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		158B9785A64E478F7E57F324C8AC998B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A624EA19AAF398DA589426D8196C3124 /* Pods-TTextRitchEditor_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC1D5E10CDDA74C06AEA5AA54C3FEDD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE0C9A880DB521037DB65B438E6615B4 /* converter.swift in Sources */,
+				D6CF525E3898C1BD6AFCEB1155EA065E /* ENUMFontSize.swift in Sources */,
+				F19C61DA32BEF94305E12A7787E86039 /* ExtColor.swift in Sources */,
+				2C79DC82083BCCF5A8EFDB3BC0A29275 /* ExtFont.swift in Sources */,
+				415EFB5B2C27080D00E4016B /* ColorPickerView.swift in Sources */,
+				3A02D33258037F9FDC5F34B49B94CD0B /* FontSizeSelectionView.swift in Sources */,
+				8654352DAA626DCF97D8926F6F195D22 /* ImageOrVideoPickerView.swift in Sources */,
+				6365B38254C948A1895140809E49C9D4 /* MediaType.swift in Sources */,
+				CAAC1CEAF7C96869BBDF9026ABFC4A00 /* NSMutableAttributedString.swift in Sources */,
+				96AA5C3AF2AF18C6119396C0EE30FE44 /* QuillParser.swift in Sources */,
+				D9FF93D0025D60770F05A3BB2C4767AA /* QuillType.swift in Sources */,
+				F7171DCC79D3AD359096F8B4C239D3ED /* RichTextEditor.swift in Sources */,
+				AE48F77FBB39F4589AA65ACA93BD947D /* TextEditorTabBarStyle.swift in Sources */,
+				44A1491231E4BCE5D728186EE013C465 /* TextEditorToolBar.swift in Sources */,
+				562AAEBE73C522FAF0709FE1BE198705 /* TextEditorViewModel.swift in Sources */,
+				786A83BE1879385A42703053D6E77E1B /* TextPosition.swift in Sources */,
+				07D520846EF10301148782DC0BB56D09 /* TextRitchEditorView.swift in Sources */,
+				BEAF51883FC082326D5447BC35512765 /* TextStyle.swift in Sources */,
+				7B9A60956A0E8A433717EE77FDFD0D4C /* TTextRitchEditor-dummy.m in Sources */,
+				3AF595924743A7DBD81C84304B209CED /* VideoPlayerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCD2D4119BC1A8B3677ADCBFC0852144 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				770853734061ED3ECC678C7A3A46A528 /* Pods-TTextRitchEditor_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D02B2B935DE5B9A543925CE7AD3F730 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TTextRitchEditor;
+			target = 1528B04F685C5C44AEDAAC5BC50414BB /* TTextRitchEditor */;
+			targetProxy = 118494923714DE01462417BA13312C22 /* PBXContainerItemProxy */;
+		};
+		8F22C5B164C364F413C79170F64D7643 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TTextRitchEditor_Example";
+			target = 4E8D7DC82AA921976B16AFE65EBA4377 /* Pods-TTextRitchEditor_Example */;
+			targetProxy = 686BE8283F3EBB92B4A7DA59D8E351BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		28A367F70B7A6AA77A31BB3F02F866E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C6B25595A77FBC3FA95D4F606B39C80 /* TTextRitchEditor.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TTextRitchEditor/TTextRitchEditor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TTextRitchEditor/TTextRitchEditor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TTextRitchEditor/TTextRitchEditor.modulemap";
+				PRODUCT_MODULE_NAME = TTextRitchEditor;
+				PRODUCT_NAME = TTextRitchEditor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5B43C691C984D0155B8E0D7063A00DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A316C4ABFAB74683C9308399488E5C9 /* Pods-TTextRitchEditor_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TTextRitchEditor_Example/Pods-TTextRitchEditor_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TTextRitchEditor_Example/Pods-TTextRitchEditor_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		73DC723BE8BB2B7DF60988A5085D7327 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6832A5B00B384775BFC75DF6D8E12CB /* TTextRitchEditor.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TTextRitchEditor/TTextRitchEditor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TTextRitchEditor/TTextRitchEditor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TTextRitchEditor/TTextRitchEditor.modulemap";
+				PRODUCT_MODULE_NAME = TTextRitchEditor;
+				PRODUCT_NAME = TTextRitchEditor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		80A1D2B04982055C24BD098DCEB1D397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F9247E808859E4A08B89C265EBAF17A /* Pods-TTextRitchEditor_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TTextRitchEditor_Tests/Pods-TTextRitchEditor_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TTextRitchEditor_Tests/Pods-TTextRitchEditor_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9C7C1DD2BD459D366946863A81FC5773 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		C2BDCD9A1FBE2C701256D25DCE8A3DA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB24B3347F0E248332C5F7DFEB7B4D65 /* Pods-TTextRitchEditor_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TTextRitchEditor_Tests/Pods-TTextRitchEditor_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TTextRitchEditor_Tests/Pods-TTextRitchEditor_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D5A8A10C73A63CFC28E54D478C38EFF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F86EA51F7EF1F499448CEA180AFEAF1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7191AFA45D8551F5BD652871AE431FA1 /* Pods-TTextRitchEditor_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TTextRitchEditor_Example/Pods-TTextRitchEditor_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TTextRitchEditor_Example/Pods-TTextRitchEditor_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09C51F7D01ED4C5B7C599529BBF7A5A2 /* Build configuration list for PBXNativeTarget "Pods-TTextRitchEditor_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80A1D2B04982055C24BD098DCEB1D397 /* Debug */,
+				C2BDCD9A1FBE2C701256D25DCE8A3DA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		138A9E0348EA121AEB534694A4FC3DFB /* Build configuration list for PBXNativeTarget "TTextRitchEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28A367F70B7A6AA77A31BB3F02F866E2 /* Debug */,
+				73DC723BE8BB2B7DF60988A5085D7327 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41CD9985FACAFADF4605B37177AAB01C /* Build configuration list for PBXNativeTarget "Pods-TTextRitchEditor_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B43C691C984D0155B8E0D7063A00DED /* Debug */,
+				F86EA51F7EF1F499448CEA180AFEAF1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5A8A10C73A63CFC28E54D478C38EFF3 /* Debug */,
+				9C7C1DD2BD459D366946863A81FC5773 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

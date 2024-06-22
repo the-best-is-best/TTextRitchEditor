@@ -1,0 +1,16 @@
+PODS:
+  - TTextRitchEditor (0.1.0)
+
+DEPENDENCIES:
+  - TTextRitchEditor (from `../`)
+
+EXTERNAL SOURCES:
+  TTextRitchEditor:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TTextRitchEditor: 06558e35f00f29f51c1b4b26e479e34a6e618038
+
+PODFILE CHECKSUM: 6d874f53ea90d149bae2f158d37847cbd9325b73
+
+COCOAPODS: 1.15.2

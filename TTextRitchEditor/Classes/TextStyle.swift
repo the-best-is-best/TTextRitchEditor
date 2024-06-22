@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+enum TextStyle: String, Codable {
+    case BOLD
+    case ITALIC
+    case UNDERLINE
+}

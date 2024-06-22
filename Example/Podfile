@@ -1,13 +1,12 @@
+platform :ios, '15'
+
 use_frameworks!
 
-platform :ios, '10.0'
 
 target 'TTextRitchEditor_Example' do
   pod 'TTextRitchEditor', :path => '../'
 
   target 'TTextRitchEditor_Tests' do
     inherit! :search_paths
-
-    
   end
 end

@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+enum QuillType: String, Codable {
+    case TEXT
+    case IMAGE
+    case VIDEO
+}

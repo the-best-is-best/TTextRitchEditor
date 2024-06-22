@@ -7,10 +7,22 @@
 //
 
 import SwiftUI
+import TTextRitchEditor
 
 struct MainContent: View {
+    @State var newValue: String = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            ScrollView {
+                VStack {
+                    TextRitchEditorView(styleTextEditorBar: TextEditorTabBarStyle(), getNewValue: $newValue)
+                        .onChange(of: newValue) { _ in
+                            //                        print("new json is \(newValue)")
+                        }
+                }
+            }
+        }
     }
 }
 

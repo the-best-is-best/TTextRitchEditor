@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct VideoPlayerView: View {
+    let videoData: Data
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        let tempURL = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString).appendingPathExtension("mov")
+        try? videoData.write(to: tempURL)
+        
+        return VideoPlayer(player: AVPlayer(url: tempURL))
     }
 }
 
-#Preview {
-    VideoPlayerView()
-}

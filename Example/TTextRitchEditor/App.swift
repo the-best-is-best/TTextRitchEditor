@@ -14,7 +14,7 @@ struct iOSApp: App {
     var body: some Scene {
     
         WindowGroup {
-            MainView().environmentObject(MainViewModel())
+            MainContent()
         }
     }
 }
