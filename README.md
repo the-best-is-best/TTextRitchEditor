@@ -1,6 +1,5 @@
 # TTextRitchEditor
 
-[![CI Status](https://img.shields.io/travis/72160249/TTextRitchEditor.svg?style=flat)](https://travis-ci.org/72160249/TTextRitchEditor)
 [![Version](https://img.shields.io/cocoapods/v/TTextRitchEditor.svg?style=flat)](https://cocoapods.org/pods/TTextRitchEditor)
 [![License](https://img.shields.io/cocoapods/l/TTextRitchEditor.svg?style=flat)](https://cocoapods.org/pods/TTextRitchEditor)
 [![Platform](https://img.shields.io/cocoapods/p/TTextRitchEditor.svg?style=flat)](https://cocoapods.org/pods/TTextRitchEditor)
