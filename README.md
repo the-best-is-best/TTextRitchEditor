@@ -6,7 +6,7 @@
 
 ## Screenshots
 <p align="center">
-<img  src="github_assets/1.png" height=300 />
+<img  src="https://raw.githubusercontent.com/the-best-is-best/TTextRitchEditor/main/github_assets/1.png" height=300 />
 </p>
 ## Example
 
