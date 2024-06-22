@@ -11,35 +11,28 @@ public struct TextRitchEditorView: View {
     let dataJson: String?
     @StateObject var viewModel: TextEditorViewModel
     var styleTextEditorBar: TextEditorTabBarStyle
-     var generatedJson: Binding<String>
-
-    public init(styleTextEditorBar: TextEditorTabBarStyle = TextEditorTabBarStyle(), dataJson: String? = nil ,getNewValue: Binding<String> ) {
+    var generatedJson: Binding<String>
+    
+    public init(styleTextEditorBar: TextEditorTabBarStyle = TextEditorTabBarStyle(), dataJson: String? = nil, getNewValue: Binding<String>) {
         self.styleTextEditorBar = styleTextEditorBar
         self.dataJson = dataJson
         _viewModel = StateObject(wrappedValue: TextEditorViewModel(data: dataJson?.data(using: .utf8))) // Initialize with nil data initially
         self.generatedJson = getNewValue
     }
-
-    @State private var image: UIImage?
     
-
-
     public var body: some View {
         ZStack {
             VStack {
-               
-
-                // Display text editor toolbar and attributed text view
                 TextEditorToolBar(style: styleTextEditorBar)
                     .environmentObject(viewModel)
                     .padding()
-
-                RichTextEditor(attributedText: $viewModel.attributedText).environmentObject(viewModel)
+                
+                RichTextEditor(attributedText: $viewModel.attributedText)
+                    .environmentObject(viewModel).frame(height: UIScreen.main.bounds.height * 0.3)
                     .border(Color.gray)
-                    .frame(maxHeight: UIScreen.main.bounds.height * 0.3)
                     .padding(.horizontal, 30)
                     .padding(.vertical)
-
+                
                 if viewModel.mediaType == .image, let imageData = viewModel.imageOrVideo, let uiImage = UIImage(data: imageData) {
                     Image(uiImage: uiImage)
                         .resizable()
@@ -51,25 +44,26 @@ public struct TextRitchEditorView: View {
                         .padding()
                 }
             }
-            .padding()
-            .frame(maxHeight: .infinity, alignment: .top)
-            .padding()
+            .background(Color.white) // Ensure background color for the full height
             .onChange(of: viewModel.generatedJson) { newJson in
                 self.generatedJson.wrappedValue = newJson ?? ""
-                      }
+            }
+            
+            // Color pickers remain unchanged
             if viewModel.showBGColor {
                 ColorPickerView(selectedColor: $viewModel.bgColor, isPickerVisible: $viewModel.showBGColor)
-                    .background(Color.clear).padding(.horizontal, 50)
+                    .background(Color.clear)
+                    .padding(.horizontal, 50)
             }
-
+            
             if viewModel.showTextColor {
                 ColorPickerView(selectedColor: $viewModel.textColor, isPickerVisible: $viewModel.showTextColor)
-                    .background(Color.clear).padding(.horizontal, 50)
+                    .background(Color.clear)
+                    .padding(.horizontal, 50)
             }
-        }
+        }.frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .top)
     }
 }
-
 #Preview {
     TextRitchEditorView(styleTextEditorBar: TextEditorTabBarStyle(), dataJson: nil, getNewValue: .constant(""))
 }
