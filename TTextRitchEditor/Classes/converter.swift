@@ -43,23 +43,46 @@ private  func convertBase64ToData(_ base64String: String) -> Data? {
 }
 
 func convertBase64ToMediaData(_ base64String: String) -> (Data?, MediaType) {
-   guard let data = convertBase64ToData(base64String) else {
-       return (nil, .unknown)
-   }
-   
-   // Check if the data represents an image or video
+    guard let data = convertBase64ToData(base64String) else {
+        return (nil, .unknown)
+    }
+    
+    // Check if the data represents an image or video
     if UIImage(data: data) != nil {
-       return (data, .image)
-   } else if let _ = try? AVAsset(url: URL(dataRepresentation: data, relativeTo: nil)!) {
-       return (data, .video)
-   } else {
-       return (nil, .unknown)
-   }
+        return (data, .image)
+    } else if isVideoData(data) {
+        return (data, .video)
+    } else {
+        return (nil, .unknown)
+    }
 }
 
-
-extension AVAsset {
-   var isVideo: Bool {
-       return tracks(withMediaType: .video).count > 0
-   }
+private func isVideoData(_ data: Data) -> Bool {
+    do {
+        // Create a temporary file URL
+        let temporaryFileURL = FileManager.default.temporaryDirectory
+            .appendingPathComponent(UUID().uuidString)
+            .appendingPathExtension("mp4")
+        
+        // Write the data to the temporary file
+        try data.write(to: temporaryFileURL)
+        
+        // Attempt to create an AVAsset from the temporary file URL
+        let asset = AVAsset(url: temporaryFileURL)
+        
+        // Check if AVAsset is successfully created
+        guard let videoTrack = asset.tracks(withMediaType: .video).first else {
+            return false // No video track found
+        }
+        
+        // Check if the track has video dimensions (optional check)
+        let hasVideoDimensions = videoTrack.naturalSize.width > 0 && videoTrack.naturalSize.height > 0
+        
+        // Optionally, you can check additional criteria here (e.g., duration, codec, etc.)
+        
+        return hasVideoDimensions
+    } catch {
+        print("Error writing data to temporary file or creating AVAsset: \(error)")
+        return false
+    }
 }

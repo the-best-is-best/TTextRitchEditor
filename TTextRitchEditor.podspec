@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TTextRitchEditor'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'TTextRitchEditor is an text editor for rich text.'
 
 # This description is used to generate tags and improve search results.

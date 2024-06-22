@@ -142,11 +142,8 @@ extension NSMutableAttributedString {
             ]
             let attributedString = try NSMutableAttributedString(data: data, options: options, documentAttributes: nil)
             
-            // Verify the attributed string's attributes by converting it back to HTML manually
-            let htmlString = attributedString.convertToHTML()
-            
-            // Ensure all attributes are correctly applied by checking the printed HTML output
-            
+          
+                    
             return attributedString
         } catch {
             print("Error converting HTML to attributed string: \(error)")

@@ -97,9 +97,9 @@ struct DynamicGrid: View {
                             case "list.bullet":
                                 viewModel.isBulletedListActive.toggle()
                                 
-                            case "color-lens":
+                            case "paintbrush":
                                 viewModel.showBGColor.toggle()
-                            case "fill-color":
+                            case "paintpalette":
                                 viewModel.showTextColor.toggle()
                             case "photo.artframe":
                                
@@ -112,7 +112,6 @@ struct DynamicGrid: View {
                             }
                         }) {
                             ZStack {
-//                                if let imageName = imageName(for: item) {
                                     Image(systemName: item)
                                         .resizable()
                                         .padding(5)
@@ -125,22 +124,6 @@ struct DynamicGrid: View {
                                             RoundedRectangle(cornerRadius: 10)
                                                 .stroke(.gray.opacity(0.1), lineWidth: 5)
                                         )
-//                                } else {
-//                                    
-//                                    Image(item)
-//                                        .renderingMode(.template)
-//                                        .resizable()
-//                                        .padding(5)
-//
-//                                        .aspectRatio(contentMode: .fit)
-//                                        .frame(width: iconSize, height: iconSize )
-//                                        .foregroundColor(getIconColor(item))
-//                                        .cornerRadius(10)
-//                                        .overlay( /// apply a rounded border
-//                                            RoundedRectangle(cornerRadius: 10)
-//                                                .stroke(.gray.opacity(0.1), lineWidth: 5)
-//                                        )
-//                                }
                             }
                         }.padding(.vertical)
                     }
@@ -214,9 +197,9 @@ struct DynamicGrid: View {
                 return style.iconUnActiveColor
             }
             
-        case "color-lens":
+        case "paintbrush":
             return viewModel.bgColor
-        case "fill-color":
+        case "paintpalette":
             return viewModel.textColor.opacity(0.5)
         default:
             return style.iconUnActiveColor
@@ -241,42 +224,6 @@ struct DynamicGrid: View {
 
         return rows
     }
-    
-    
-    
-    
-    private func imageName(for item: String) -> String? {
-            switch item {
-            case "text.alignleft":
-                return "text.alignleft" // Name of your image asset in Assets.xcassets
-            case "text.aligncenter":
-                return "text.aligncenter" // Name of your image asset in Assets.xcassets
-            case "text.alignright":
-                return "text.alignright" // Name of your image asset in Assets.xcassets
-            case "bold":
-                return "bold" // Name of your image asset in Assets.xcassets
-            case "italic":
-                return "italic" // Name of your image asset in Assets.xcassets
-            case "underline":
-                return "underline" // Name of your image asset in Assets.xcassets
-            case "strikethrough":
-                return "strikethrough" // Name of your image asset in Assets.xcassets
-            case "textformat.size":
-                return "textformat.size" // Name of your image asset in Assets.xcassets
-            case "textformat.superscript":
-                return "textformat.superscript" // Name of your image asset in Assets.xcassets
-            case "textformat.subscript":
-                return "textformat.subscript" // Name of your image asset in Assets.xcassets
-            case "bullet":
-                return "bullet_icon" // Name of your image asset in Assets.xcassets
-            case "photo.artframe":
-                return "photo.artframe"
-            case "video.fill":
-                return "video.fill"
-            default:
-                return nil
-            }
-        }
 
 }
 

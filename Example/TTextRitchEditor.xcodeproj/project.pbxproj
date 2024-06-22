@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C4CE9FFF13C477EB9FA3EAF /* Pods_TTextRitchEditor_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BEF4CB108F478A32870A8A /* Pods_TTextRitchEditor_Tests.framework */; };
 		415EFB582C27033D00E4016B /* MainContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFB572C27033D00E4016B /* MainContent.swift */; };
+		415EFB5D2C270DF200E4016B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFB5C2C270DF200E4016B /* MainViewModel.swift */; };
 		419672662C205DC300D76CE4 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419672652C205DC300D76CE4 /* App.swift */; };
 		41B1AF842C21E5C90035FBFB /* example.json in Resources */ = {isa = PBXBuildFile; fileRef = 41B1AF832C21E5C90035FBFB /* example.json */; };
 		4FAE4E45B200072A8959F6DE /* Pods_TTextRitchEditor_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1ADE38DB2E803C14891ADDA /* Pods_TTextRitchEditor_Example.framework */; };
@@ -31,6 +32,7 @@
 		09A5888825C842C010D038AA /* Pods-TTextRitchEditor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTextRitchEditor_Example.release.xcconfig"; path = "Target Support Files/Pods-TTextRitchEditor_Example/Pods-TTextRitchEditor_Example.release.xcconfig"; sourceTree = "<group>"; };
 		31BEF4CB108F478A32870A8A /* Pods_TTextRitchEditor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTextRitchEditor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		415EFB572C27033D00E4016B /* MainContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContent.swift; sourceTree = "<group>"; };
+		415EFB5C2C270DF200E4016B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		419672652C205DC300D76CE4 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		41B1AF832C21E5C90035FBFB /* example.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = example.json; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TTextRitchEditor_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTextRitchEditor_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,7 @@
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				41B1AF832C21E5C90035FBFB /* example.json */,
 				415EFB572C27033D00E4016B /* MainContent.swift */,
+				415EFB5C2C270DF200E4016B /* MainViewModel.swift */,
 			);
 			name = "Example for TTextRitchEditor";
 			path = TTextRitchEditor;
@@ -333,6 +336,7 @@
 				419672662C205DC300D76CE4 /* App.swift in Sources */,
 				415EFB582C27033D00E4016B /* MainContent.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				415EFB5D2C270DF200E4016B /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
