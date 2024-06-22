@@ -4,6 +4,10 @@
 [![License](https://img.shields.io/cocoapods/l/TTextRitchEditor.svg?style=flat)](https://cocoapods.org/pods/TTextRitchEditor)
 [![Platform](https://img.shields.io/cocoapods/p/TTextRitchEditor.svg?style=flat)](https://cocoapods.org/pods/TTextRitchEditor)
 
+## Screenshots
+<p align="center">
+<img  src="github_assets/1.png" height=300 />
+</p>
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
