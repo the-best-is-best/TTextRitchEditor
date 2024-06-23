@@ -3,6 +3,10 @@
 [![Version](https://img.shields.io/cocoapods/v/TTextRitchEditor.svg?style=flat)](https://cocoapods.org/pods/TTextRitchEditor)
 [![License](https://img.shields.io/cocoapods/l/TTextRitchEditor.svg?style=flat)](https://cocoapods.org/pods/TTextRitchEditor)
 [![Platform](https://img.shields.io/cocoapods/p/TTextRitchEditor.svg?style=flat)](https://cocoapods.org/pods/TTextRitchEditor)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.the-best-is-best/composequill)](https://central.sonatype.com/artifact/io.github.the-best-is-best/composequill) 
+[<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" height="20">](https://github.com/the-best-is-best/ComposeQuill)
+
+
 
 ## Screenshots
 <p align="center">

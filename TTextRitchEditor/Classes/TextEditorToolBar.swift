@@ -32,9 +32,9 @@ public struct TextEditorToolBar: View {
       
     }
 }
-//#Preview {
-//    TextEditorToolBar(style: TextEditorTabBarStyle()).environmentObject(TextEditorViewModel(data: nil))
-//}
+#Preview {
+    TextEditorToolBar(style: TextEditorTabBarStyle()).environmentObject(TextEditorViewModel(data: nil))
+}
 
 
 
@@ -114,12 +114,14 @@ struct DynamicGrid: View {
                             ZStack {
                                     Image(systemName: item)
                                         .resizable()
-                                        .padding(5)
+                                        .padding(6)
 
                                         .aspectRatio(contentMode: .fit)
                                         .frame(width: iconSize, height: iconSize)
-                                        .foregroundColor(getIconColor(item)) // Ensures the image is visible
+                                        .foregroundColor(getIconColor(item))
+                                        .background(getBackgroundColor(item))
                                         .cornerRadius(10)
+                                       
                                         .overlay( /// apply a rounded border
                                             RoundedRectangle(cornerRadius: 10)
                                                 .stroke(.gray.opacity(0.1), lineWidth: 5)
@@ -140,59 +142,61 @@ struct DynamicGrid: View {
         .padding()
     }
     
+    
+    
     private func getIconColor(_ item: String) -> Color{
         switch item {
         case "text.alignleft":
             if(viewModel.textAlign == .left){
-                return style.iconActiveBGColor
+                return style.iconActiveColor
             }else{
                 return style.iconUnActiveColor
             }
         case "text.aligncenter":
             if(viewModel.textAlign == .center){
-                return style.iconActiveBGColor
+                return style.iconActiveColor
             }else{
                 return style.iconUnActiveColor
             }
         case "text.alignright":
             if(viewModel.textAlign == .right){
-                return style.iconActiveBGColor
+                return style.iconActiveColor
             }else{
                 return style.iconUnActiveColor
             }
         case "bold":
             if(viewModel.applyBold){
-                return style.iconActiveBGColor
+                return style.iconActiveColor
             }else{
                 return style.iconUnActiveColor
             }
         case "italic":
             if(viewModel.applyItalic){
-                return style.iconActiveBGColor
+                return style.iconActiveColor
             }else{
                 return style.iconUnActiveColor
             }
         case "underline":
             if(viewModel.applyUnderline){
-                return style.iconActiveBGColor
+                return style.iconActiveColor
             }else{
                 return style.iconUnActiveColor
             }
         case "strikethrough":
             if(viewModel.applyStrikethrough){
-                return style.iconActiveBGColor
+                return style.iconActiveColor
             }else{
                 return style.iconUnActiveColor
             }
         case "textformat.superscript":
             if(viewModel.textPosition == .SUPERSCRIPT){
-                return style.iconActiveBGColor
+                return style.iconActiveColor
             }else{
                 return style.iconUnActiveColor
             }
         case "textformat.subscript":
             if(viewModel.textPosition == .SUBSCRIPT){
-                return style.iconActiveBGColor
+                return style.iconActiveColor
             }else{
                 return style.iconUnActiveColor
             }
@@ -207,7 +211,68 @@ struct DynamicGrid: View {
     }
     
    
+    private func getBackgroundColor(_ item: String) -> Color{
+        switch item {
+        case "text.alignleft":
+            if(viewModel.textAlign == .left){
+                return style.iconActiveBGColor
+            }else{
+                return style.iconUnActiveBGColor
+            }
+        case "text.aligncenter":
+            if(viewModel.textAlign == .center){
+                return style.iconActiveBGColor
+            }else{
+                return style.iconUnActiveBGColor
+            }
+        case "text.alignright":
+            if(viewModel.textAlign == .right){
+                return style.iconActiveBGColor
+            }else{
+                return style.iconUnActiveBGColor
+            }
+        case "bold":
+            if(viewModel.applyBold){
+                return style.iconActiveBGColor
+            }else{
+                return style.iconUnActiveBGColor
+            }
+        case "italic":
+            if(viewModel.applyItalic){
+                return style.iconActiveBGColor
+            }else{
+                return style.iconUnActiveBGColor
+            }
+        case "underline":
+            if(viewModel.applyUnderline){
+                return style.iconActiveBGColor
+            }else{
+                return style.iconUnActiveBGColor
+            }
+        case "strikethrough":
+            if(viewModel.applyStrikethrough){
+                return style.iconActiveBGColor
+            }else{
+                return style.iconUnActiveBGColor
+            }
+        case "textformat.superscript":
+            if(viewModel.textPosition == .SUPERSCRIPT){
+                return style.iconActiveBGColor
+            }else{
+                return style.iconUnActiveBGColor
+            }
+        case "textformat.subscript":
+            if(viewModel.textPosition == .SUBSCRIPT){
+                return style.iconActiveBGColor
+            }else{
+                return style.iconUnActiveBGColor
+            }
+        default:
+            return style.iconUnActiveBGColor
+        }
+    }
     
+   
     private func generateRows(items: [String], availableWidth: CGFloat, iconSize: CGFloat, spacing: CGFloat) -> [[String]] {
         var rows: [[String]] = [[]]
         var currentWidth: CGFloat = 0
